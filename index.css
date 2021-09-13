@@ -1,10 +1,226 @@
-h1 {
-    text-align: center;
-    color:cadetblue;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
-p{
-    text-align: center;
-    color: crimson;
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url("Comp.jpg")no-repeat;
+    background-size:cover;
+    background-position: center;
+}
 
+h2 .Home{
+    position: relative;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+    align-items: left;
+    padding: 10px 50px;
+}
+
+header .Home{
+    position: relative;
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    height: fit-content;
+    max-width: 20px;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+header .nav-right a{
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    max-width: 20px;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 50px;
+    transition: o.3s;
+    transition-property: background;
+}
+
+header .nav-right a:hover{
+    background: rgb(224, 48, 121);
+}
+
+header .nav-right a:not(:last-child){
+    margin-inline: 30px;
+}
+
+header .navigation a:hover{
+    background: #fff;
+}
+
+.main{
+    max-width: 650px;
+    margin: 60px 100px;
+}
+
+.main .info h2{
+    color: rgb(0, 0, 0);
+    font-size: 55px; 
+    text-transform: none;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.main .info h2 span{
+    color:#c575db;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.main .info p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.main .info img{
+    max-height: 300px;
+    max-width: 300px;
+    border: 5px solid #f158d8;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 3px;
+}
+
+.main .info-btn{
+    color:#fff;
+    background:lightseagreen;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 750px;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.main .info-btn:hover{
+    background:rgb(69, 169, 231);
+
+}
+
+label{
+    display: none;
+}
+
+#check{
+    z-index: 3;
+    display: none;
+}
+
+@media (max-width: 960px){
+    header .nav-right{
+        display: none;
+}
+
+label{
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+}
+
+label :hover{
+    color: rgb(255, 88, 88);
+ }
+
+ label .close-btn{
+     display: none;
+}
+
+#check:checked ~ header .nav-right{
+    z-index: 2;
+    position: fixed;
+    background:rgb(255, 176, 209);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#check:checked ~ header .nav-right a{
+    font-weight: 700;
+    margin-right: 0;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+#check:checked ~ header label .menu-btn{
+    display: none;
+}
+
+#check:checked ~ header label .close-btn{
+    z-index: 2;
+    display: block;
+    position: fixed;
+}
+
+label .menu-btn{
+    position: absolute;
+}
+
+header .Home{
+    position: absolute;
+    bottom: -6px;
+}
+
+.main .info h2{
+    font-size: 45px;
+    line-height: 50px;
+}
+
+.main .info h2 span{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.content .info p{
+    font-size: 14px;
+ } 
+}
+
+@media (max-width: 560px){
+    .main .info h2{
+        font-size: 35px;
+        line-height: 50px;
+    }
+    
+    .main .info h2 span{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .content .info p{
+        font-size: 14px;
+    }
 }
